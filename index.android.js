@@ -61,6 +61,13 @@ var WebViewAndroid = createClass({
       null
     );
   },
+  scrollUp: function() {
+    RCTUIManager.dispatchViewManagerCommand(
+      this._getWebViewHandle(),
+      RCTUIManager.RNWebViewAndroid.Commands.scrollUp,
+      null
+    );
+  },
   render: function() {
     return <RNWebViewAndroid ref={WEBVIEW_REF} {...this.props} onNavigationStateChange={this._onNavigationStateChange} />;
   },
